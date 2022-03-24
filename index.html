@@ -727,6 +727,27 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-    
+  <script>// Import the functions you need from the SDKs you need
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-app.js";
+		import { getFirestore } from "firebase/firestore";
+		
+		// TODO: Add SDKs for Firebase products that you want to use
+		// https://firebase.google.com/docs/web/setup#available-libraries
+		
+		// Your web app's Firebase configuration
+		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+		const firebaseConfig = {
+			apiKey: "AIzaSyDT0BLm-hNzSSWMcmCK-b8I5w7m_bu7xf4",
+			authDomain: "ieee-website-da2e0.firebaseapp.com",
+			projectId: "ieee-website-da2e0",
+			storageBucket: "ieee-website-da2e0.appspot.com",
+			messagingSenderId: "722838344357",
+			appId: "1:722838344357:web:c2e2f681c4345ca7f6334c",
+			measurementId: "G-C525CHK706"
+		};
+		
+		// Initialize Firebase
+		const app = initializeApp(firebaseConfig);
+		const firestore = getFirestore(app);</script>>
   </body>
 </html>
