@@ -1,0 +1,558 @@
+<html>
+
+<head>
+    <title>Techadroit - IEEE PEC Flagship Event</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Login - Register Template">
+    <meta name="author" content="Lorenzo Angelino aka MrLolok">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="photo.png" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        /* Nodes --> */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            /* background-color: #333; */
+            overflow: hidden;
+            /* margin: 0;
+            padding: 0; */
+            font-family: 'Raleway', sans-serif;
+            color: #F2F2F2;
+            /* background-color: #303641; */
+
+        }
+
+        canvas {
+            background-color: rgb(0, 0, 0);
+        }
+
+        /*  Login Page --> */
+        @import url('https://fonts.googleapis.com/css?family=Raleway');
+
+        #container-login {
+            background-color: #1D1F20;
+            position: relative;
+            top: -80%;
+            /* right: 15%; */
+            margin: auto;
+            width: 340px;
+            height: 470px;
+            border-radius: 0.35em;
+            box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+            text-align: center;
+            /* z-index: 2; */
+        }
+
+        #container-register {
+            background-color: #1D1F20;
+            position: relative;
+            top: 20%;
+            margin: auto;
+            width: 340px;
+            height: 480px;
+            border-radius: 0.35em;
+            box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        #title {
+            position: relative;
+            background-color: #1A1C1D;
+            width: 100%;
+            padding: 20px 0px;
+            border-radius: 0.35em;
+            font-size: 22px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .lock {
+            position: relative;
+            top: 2px;
+        }
+
+        .input {
+            margin: auto;
+            width: 240px;
+            border-radius: 4px;
+            background-color: #373b3d;
+            padding: 8px 0px;
+            margin-top: 15px;
+        }
+
+        .input-addon {
+            float: left;
+            background-color: #373b3d;
+            border: 1px solid #373b3d;
+            padding: 4px 8px;
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        input[type=checkbox] {
+            cursor: pointer;
+        }
+
+        input[type=text] {
+            color: #949494;
+            margin: 0;
+            background-color: #373b3d;
+            border: 1px solid #373b3d;
+            padding: 6px 0px;
+            border-radius: 3px;
+        }
+
+        input[type=text]:focus {
+            border: 1px solid #373b3d;
+        }
+
+        input[type=password] {
+            color: #949494;
+            margin: 0;
+            background-color: #373b3d;
+            border: 1px solid #373b3d;
+            padding: 6px 0px;
+            border-radius: 3px;
+        }
+
+        input[type=password]:focus {
+            border: 1px solid #373b3d;
+        }
+
+        input[type=email] {
+            color: #949494;
+            margin: 0;
+            background-color: #373b3d;
+            border: 1px solid #373b3d;
+            padding: 6px 0px;
+            border-radius: 3px;
+        }
+
+        input[type=email]:focus {
+            border: 1px solid #373b3d;
+        }
+
+        .forgot-password {
+            position: relative;
+            bottom: 0%;
+        }
+
+        .forgot-password a:link {
+            color: #C1C3C6;
+            text-decoration: none;
+        }
+
+        .forgot-password a:visited {
+            color: #C1C3C6;
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            color: #FFF;
+            transition: color 1s;
+        }
+
+        .privacy {
+            margin-top: 5px;
+            position: relative;
+            font-size: 12px;
+            bottom: 0%;
+        }
+
+        .privacy a:link {
+            color: #949494;
+            text-decoration: none;
+        }
+
+        .privacy a:visited {
+            color: #949494;
+            text-decoration: none;
+        }
+
+        .privacy a:hover {
+            color: #C1C3C6;
+            transition: color 1s;
+        }
+
+        *:focus {
+            outline: none;
+        }
+
+        .remember-me {
+            margin: 10px 0;
+        }
+
+        input[type=submit] {
+            padding: 6px 25px;
+            background: #373E4A;
+            color: #C1C3C6;
+            font-weight: bold;
+            border: 0 none;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .register {
+            margin: auto;
+            padding: 16px 0;
+            text-align: center;
+            margin-top: 40px;
+            width: 85%;
+            border-top: 1px solid #C1C3C6;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        #register-link {
+            margin-top: 10px;
+            padding: 6px 25px;
+            background: #373E4A;
+            color: #C1C3C6;
+            font-weight: bold;
+            border: 0 none;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="nokey" width="800" height="800">
+        Your Browser Don't Support Canvas, Please Download Chrome ^_^``
+    </canvas>
+    <div id="container-login">
+        <div id="title">
+            <i class="material-icons lock">lock</i> Login
+        </div>
+
+        <form>
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons">face</i>
+                </div>
+                <input id="username" placeholder="Username" type="text" required class="validate" autocomplete="off">
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons">vpn_key</i>
+                </div>
+                <input id="password" placeholder="Password" type="password" required class="validate"
+                    autocomplete="off">
+            </div>
+
+            <div class="remember-me">
+                <input type="checkbox">
+                <span style="color: #DDD">Remember Me</span>
+            </div>
+
+            <input type="submit" value="Log In" />
+        </form>
+
+        <div class="forgot-password">
+            <a href="#">Forgot your password?</a>
+        </div>
+        <!-- <div class="privacy">
+            <a href="#">Privacy Policy</a>
+        </div> -->
+
+        <div class="register">
+            Don't have an account yet?
+            <a href="#"><button id="register-link">Register here</button></a>
+        </div>
+    </div>    
+
+    <script>
+        var canvas = document.getElementById('nokey'),
+            can_w = parseInt(canvas.getAttribute('width')),
+            can_h = parseInt(canvas.getAttribute('height')),
+            ctx = canvas.getContext('2d');
+
+        // console.log(typeof can_w);
+        var BALL_NUM = 50
+
+        var ball = {
+            x: 0,
+            y: 0,
+            vx: 0,
+            vy: 0,
+            r: 0,
+            alpha: 1,
+            phase: 0
+        },
+            ball_color = {
+                r: 207,
+                g: 255,
+                b: 4
+            },
+            R = 2,
+            balls = [],
+            alpha_f = 0.03,
+            alpha_phase = 0,
+
+            // Line
+            link_line_width = 0.8,
+            dis_limit = 260,
+            add_mouse_point = true,
+            mouse_in = false,
+            mouse_ball = {
+                x: 0,
+                y: 0,
+                vx: 0,
+                vy: 0,
+                r: 0,
+                type: 'mouse'
+            };
+
+        // Random speed
+        function getRandomSpeed(pos) {
+            var min = -1,
+                max = 1;
+            switch (pos) {
+                case 'top':
+                    return [randomNumFrom(min, max), randomNumFrom(0.1, max)];
+                    break;
+                case 'right':
+                    return [randomNumFrom(min, -0.1), randomNumFrom(min, max)];
+                    break;
+                case 'bottom':
+                    return [randomNumFrom(min, max), randomNumFrom(min, -0.1)];
+                    break;
+                case 'left':
+                    return [randomNumFrom(0.1, max), randomNumFrom(min, max)];
+                    break;
+                default:
+                    return;
+                    break;
+            }
+        }
+        function randomArrayItem(arr) {
+            return arr[Math.floor(Math.random() * arr.length)];
+        }
+        function randomNumFrom(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+        console.log(randomNumFrom(0, 10));
+        // Random Ball
+        function getRandomBall() {
+            var pos = randomArrayItem(['top', 'right', 'bottom', 'left']);
+            switch (pos) {
+                case 'top':
+                    return {
+                        x: randomSidePos(can_w),
+                        y: -R,
+                        vx: getRandomSpeed('top')[0],
+                        vy: getRandomSpeed('top')[1],
+                        r: R,
+                        alpha: 1,
+                        phase: randomNumFrom(0, 10)
+                    }
+                    break;
+                case 'right':
+                    return {
+                        x: can_w + R,
+                        y: randomSidePos(can_h),
+                        vx: getRandomSpeed('right')[0],
+                        vy: getRandomSpeed('right')[1],
+                        r: R,
+                        alpha: 1,
+                        phase: randomNumFrom(0, 10)
+                    }
+                    break;
+                case 'bottom':
+                    return {
+                        x: randomSidePos(can_w),
+                        y: can_h + R,
+                        vx: getRandomSpeed('bottom')[0],
+                        vy: getRandomSpeed('bottom')[1],
+                        r: R,
+                        alpha: 1,
+                        phase: randomNumFrom(0, 10)
+                    }
+                    break;
+                case 'left':
+                    return {
+                        x: -R,
+                        y: randomSidePos(can_h),
+                        vx: getRandomSpeed('left')[0],
+                        vy: getRandomSpeed('left')[1],
+                        r: R,
+                        alpha: 1,
+                        phase: randomNumFrom(0, 10)
+                    }
+                    break;
+            }
+        }
+        function randomSidePos(length) {
+            return Math.ceil(Math.random() * length);
+        }
+
+        // Draw Ball
+        function renderBalls() {
+            Array.prototype.forEach.call(balls, function (b) {
+                if (!b.hasOwnProperty('type')) {
+                    ctx.fillStyle = 'rgba(' + ball_color.r + ',' + ball_color.g + ',' + ball_color.b + ',' + b.alpha + ')';
+                    ctx.beginPath();
+                    ctx.arc(b.x, b.y, R, 0, Math.PI * 2, true);
+                    ctx.closePath();
+                    ctx.fill();
+                }
+            });
+        }
+
+        // Update balls
+        function updateBalls() {
+            var new_balls = [];
+            Array.prototype.forEach.call(balls, function (b) {
+                b.x += b.vx;
+                b.y += b.vy;
+
+                if (b.x > -(50) && b.x < (can_w + 50) && b.y > -(50) && b.y < (can_h + 50)) {
+                    new_balls.push(b);
+                }
+
+                // alpha change
+                b.phase += alpha_f;
+                b.alpha = Math.abs(Math.cos(b.phase));
+                // console.log(b.alpha);
+            });
+
+            balls = new_balls.slice(0);
+        }
+
+        // loop alpha
+        function loopAlphaInf() {
+
+        }
+
+        // Draw lines
+        function renderLines() {
+            var fraction, alpha;
+            for (var i = 0; i < balls.length; i++) {
+                for (var j = i + 1; j < balls.length; j++) {
+
+                    fraction = getDisOf(balls[i], balls[j]) / dis_limit;
+
+                    if (fraction < 1) {
+                        alpha = (1 - fraction).toString();
+
+                        ctx.strokeStyle = 'rgba(150,150,150,' + alpha + ')';
+                        ctx.lineWidth = link_line_width;
+
+                        ctx.beginPath();
+                        ctx.moveTo(balls[i].x, balls[i].y);
+                        ctx.lineTo(balls[j].x, balls[j].y);
+                        ctx.stroke();
+                        ctx.closePath();
+                    }
+                }
+            }
+        }
+
+        // calculate distance between two points
+        function getDisOf(b1, b2) {
+            var delta_x = Math.abs(b1.x - b2.x),
+                delta_y = Math.abs(b1.y - b2.y);
+
+            return Math.sqrt(delta_x * delta_x + delta_y * delta_y);
+        }
+
+        // add balls if there a little balls
+        function addBallIfy() {
+            if (balls.length < BALL_NUM) {
+                balls.push(getRandomBall());
+            }
+        }
+
+        // Render
+        function render() {
+            ctx.clearRect(0, 0, can_w, can_h);
+
+            renderBalls();
+
+            renderLines();
+
+            updateBalls();
+
+            addBallIfy();
+
+            window.requestAnimationFrame(render);
+        }
+
+        // Init Balls
+        function initBalls(num) {
+            for (var i = 1; i <= num; i++) {
+                balls.push({
+                    x: randomSidePos(can_w),
+                    y: randomSidePos(can_h),
+                    vx: getRandomSpeed('top')[0],
+                    vy: getRandomSpeed('top')[1],
+                    r: R,
+                    alpha: 1,
+                    phase: randomNumFrom(0, 10)
+                });
+            }
+        }
+        // Init Canvas
+        function initCanvas() {
+            canvas.setAttribute('width', window.innerWidth);
+            canvas.setAttribute('height', window.innerHeight);
+
+            can_w = parseInt(canvas.getAttribute('width'));
+            can_h = parseInt(canvas.getAttribute('height'));
+        }
+        window.addEventListener('resize', function (e) {
+            console.log('Window Resize...');
+            initCanvas();
+        });
+
+        function goMovie() {
+            initCanvas();
+            initBalls(BALL_NUM);
+            window.requestAnimationFrame(render);
+        }
+        goMovie();
+
+        // Mouse effect
+        canvas.addEventListener('mouseenter', function () {
+            console.log('mouseenter');
+            mouse_in = true;
+            balls.push(mouse_ball);
+        });
+        canvas.addEventListener('mouseleave', function () {
+            console.log('mouseleave');
+            mouse_in = false;
+            var new_balls = [];
+            Array.prototype.forEach.call(balls, function (b) {
+                if (!b.hasOwnProperty('type')) {
+                    new_balls.push(b);
+                }
+            });
+            balls = new_balls.slice(0);
+        });
+        canvas.addEventListener('mousemove', function (e) {
+            var e = e || window.event;
+            mouse_ball.x = e.pageX;
+            mouse_ball.y = e.pageY;
+            // console.log(mouse_ball);
+        });
+    </script>
+</body>
+
+</html>
