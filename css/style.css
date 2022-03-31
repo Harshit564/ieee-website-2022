@@ -8582,8 +8582,8 @@ h1, h2, h3, h4, h5,
   transition: all 0.3s ease;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
   .speaker-wrap .speaker-img {
-    width: 180px;
-    height: 250px; }
+    width: 320px;
+    height: 275px; }
     @media (max-width: 767.98px) {
       .speaker-wrap .speaker-img {
         margin-bottom: 20px;
@@ -8666,6 +8666,45 @@ h1, h2, h3, h4, h5,
         .speaker .ftco-social li a:hover, .speaker .ftco-social li a:focus {
           color: #1162fb; }
 
+          #supporters {
+            padding: 60px 0;
+            background: rgba(255, 255, 255, 0.5);
+          }
+          
+          #supporters .supporters-wrap {
+            /* border-top: 1px solid #e0e5fa;
+            border-left: 1px solid #e0e5fa; */
+            margin-bottom: 30px;
+            align-items: center;
+          }
+          
+          #supporters .supporter-logo {
+            padding: 30px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            /* border-right: 1px solid #e0e5fa;
+            border-bottom: 1px solid #e0e5fa; */
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.5);
+            height: 160px;
+          }
+          
+          #supporters .supporter-logo:hover img {
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+          }
+          
+          #supporters img {
+            transition: all 0.4s ease-in-out;
+          }
+          
 .block-7 {
   margin-bottom: 30px;
   padding: 30px;
@@ -8818,6 +8857,44 @@ h1, h2, h3, h4, h5,
     .services-wrap:hover .icon span {
       color: #fff; }
 
+      .section-header {
+        margin-bottom: 60px;
+        position: relative;
+        padding-bottom: 20px;
+      }
+      
+      .section-header::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 60px;
+        height: 5px;
+        background: #f82249;
+        bottom: 0;
+        left: calc(50% - 25px);
+      }
+      
+      .section-header h2 {
+        font-size: 36px;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      
+      .section-header p {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        font-size: 18px;
+        font-weight: 500;
+        color: #9195a2;
+      }
+      
+      .section-with-bg {
+        background-color: #f6f7fd;
+      }
+      
 .ftco-section-parallax {
   position: relative; }
   .ftco-section-parallax .heading-section-white h2 {
